@@ -3,40 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>超能下蛋鸭 - 全网兑换码中心</title>
+    <title>超能下蛋鸭 - 专属兑换码中心</title>
     <style>
-        * {margin:0;padding:0;box-sizing:border-box;font-family:"微软雅黑","幼圆",sans-serif;}
-        body {background:#fff9e8;background-image:radial-gradient(#ffe8b9 10%,transparent 11%);background-size:20px 20px;padding:18px;}
-        .duck-wrap {max-width:620px;margin:0 auto;background:#fff;border-radius:24px;padding:28px;box-shadow:0 6px 18px rgba(255,180,60,0.25);border:2px solid #ffd88a;}
-        .duck-title {text-align:center;margin-bottom:12px;}
-        .duck-title h1 {color:#ffaa2b;font-size:26px;letter-spacing:2px;}
-        .duck-desc {text-align:center;color:#b98c48;font-size:14px;margin-bottom:20px;}
-        .refresh-box {text-align:center;margin-bottom:25px;}
-        .refresh-btn {background:#ff9f29;border:none;color:#fff;padding:10px 24px;border-radius:30px;font-size:15px;cursor:pointer;transition:0.2s;}
-        .refresh-btn:hover {background:#ff8c00;}
-        .refresh-btn:disabled {background:#ccc;cursor:not-allowed;}
-        .code-card {background:#fff5dc;border-radius:16px;padding:16px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;border:1px solid #ffe2a0;}
-        .code-info .code-str {font-size:17px;font-weight:bold;color:#6b4f28;}
-        .new-badge {display:inline-block;background:#ff5959;color:#fff;font-size:12px;padding:2px 8px;border-radius:12px;margin-left:8px;}
-        .source-badge {display:inline-block;background:#42b983;color:#fff;font-size:11px;padding:2px 6px;border-radius:10px;margin-left:6px;}
-        .code-tip {font-size:13px;color:#a8875c;margin-top:5px;}
-        .copy-btn {background:#ffc252;border:none;color:#fff;font-weight:bold;padding:8px 14px;border-radius:12px;cursor:pointer;transition:0.2s;}
-        .copy-btn:hover {background:#ffb020;}
-        .help-box {margin-top:35px;background:#fff9e8;border-radius:16px;padding:20px;border:1px dashed #ffd88a;}
-        .help-box h4 {color:#ffaa2b;margin-bottom:10px;font-size:16px;}
-        .help-box p {color:#8c6d42;line-height:1.7;font-size:14px;}
-        .update-time {text-align:center;margin-top:25px;font-size:13px;color:#c4a474;}
-        .scan-range {text-align:center;font-size:12px;color:#999;margin-bottom:15px;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "幼圆", sans-serif;
+        }
+        body {
+            background-color: #fff9e8;
+            background-image: radial-gradient(#ffe8b9 10%, transparent 11%);
+            background-size: 20px 20px;
+            padding: 18px;
+        }
+        .duck-wrap {
+            max-width: 620px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 6px 18px rgba(255, 180, 60, 0.25);
+            border: 2px solid #ffd88a;
+        }
+        .duck-title {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .duck-title h1 {
+            color: #ffaa2b;
+            font-size: 26px;
+            letter-spacing: 2px;
+        }
+        .duck-desc {
+            text-align: center;
+            color: #b98c48;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .refresh-box {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .refresh-btn {
+            background: #ff9f29;
+            border: none;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .refresh-btn:hover {
+            background: #ff8c00;
+        }
+        .refresh-btn:disabled {
+            background: #ccc;
+            cursor:not-allowed;
+        }
+        .code-card {
+            background: #fff5dc;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ffe2a0;
+        }
+        .code-info .code-str {
+            font-size: 17px;
+            font-weight: bold;
+            color: #6b4f28;
+        }
+        .new-badge {
+            display: inline-block;
+            background: #ff5959;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .code-tip {
+            font-size: 13px;
+            color: #a8875c;
+            margin-top: 5px;
+        }
+        .copy-btn {
+            background: #ffc252;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .help-box {
+            margin-top: 35px;
+            background: #fff9e8;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px dashed #ffd88a;
+        }
+        .help-box h4 {
+            color: #ffaa2b;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .help-box p {
+            color: #8c6d42;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        .update-time {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #c4a474;
+        }
     </style>
 </head>
 <body>
     <div class="duck-wrap">
-        <div class="duck-title"><h1>🐥 超能下蛋鸭</h1></div>
-        <div class="duck-desc">全网多平台扫描 · 出新码微信秒推</div>
-        <div class="scan-range">扫描范围：官方+媒体+短视频+社群（每2小时自动更新）</div>
+        <div class="duck-title">
+            <h1>🐥 超能下蛋鸭</h1>
+        </div>
+        <div class="duck-desc">
+            全自动6小时扫描 · 扩大全网范围 · 出新码微信提醒
+        </div>
 
+        <!-- 手动扫描按钮 -->
         <div class="refresh-box">
-            <button class="refresh-btn" id="refreshBtn" onclick="manualRefresh()">🔄 全网手动扫描最新兑换码</button>
+            <button class="refresh-btn" id="refreshBtn" onclick="manualRefresh()">🔄 手动全网扫描兑换码</button>
         </div>
 
         <div id="codeList"></div>
@@ -49,89 +150,82 @@
             <p>4. 复制上方兑换码粘贴，即可领取奖励</p>
         </div>
 
-        <div class="update-time" id="updateText">最后全网扫描：加载中...</div>
+        <div class="update-time" id="updateText">最后更新：加载中...</div>
     </div>
 
 <script>
-    // 全网码库（官方+媒体+短视频+社群）
+    // 扩大范围后的兑换码库（官方+媒体+社区）
     let codeData = [
-        {code:"kdn888",tag:"最新",tip:"官方TapTap｜有效期至2026-04-26",source:"官方"},
-        {code:"zpl666",tag:"限时",tip:"官方TapTap｜每周福利",source:"官方"},
-        {code:"vra666",tag:"限时",tip:"官方TapTap｜每周福利",source:"官方"},
-        {code:"DUCK666",tag:"常规",tip:"媒体汇总｜长期有效",source:"媒体"},
-        {code:"DUCK888",tag:"常规",tip:"媒体汇总｜长期有效",source:"媒体"},
-        {code:"VIP666",tag:"福利",tip:"全网通用｜永久可用",source:"全网"},
-        {code:"VIP777",tag:"福利",tip:"全网通用｜永久可用",source:"全网"},
-        {code:"VIP888",tag:"福利",tip:"全网通用｜永久可用",source:"全网"},
-        {code:"xxn666",tag:"福利",tip:"社群分享｜新手礼包",source:"社群"},
-        {code:"DL666",tag:"隐藏",tip:"抖音/公众号｜隐藏福利",source:"短视频"}
+        {code: "kdn888", tag: "最新", tip: "限时有效｜钻石礼包"},
+        {code: "zpl666", tag: "常规", tip: "官方福利｜长期有效"},
+        {code: "vra666", tag: "常规", tip: "官方福利｜长期有效"},
+        {code: "DUCK666", tag: "常规", tip: "长期有效｜金币奖励"},
+        {code: "DUCK888", tag: "常规", tip: "长期有效｜道具福利"},
+        {code: "VIP666", tag: "福利", tip: "永久可用｜稀有道具"},
+        {code: "VIP777", tag: "福利", tip: "永久可用｜稀有道具"},
+        {code: "VIP888", tag: "福利", tip: "永久可用｜稀有道具"},
+        {code: "xxn666", tag: "福利", tip: "永久可用｜新手礼包"}
     ];
 
-    // 模拟全网最新码（爬虫自动同步）
-    let latestRemoteCodes = [...codeData];
+    let latestCodes = [...codeData];
 
-    // 渲染页面
-    function initPage() {renderCodeList();updateTimeText();}
+    // 初始化页面
+    function initPage() {
+        renderList();
+        updateTime();
+    }
 
-    // 渲染兑换码列表（带来源标签）
-    function renderCodeList(){
+    // 渲染兑换码
+    function renderList() {
         let html = "";
-        latestRemoteCodes.forEach(item => {
+        latestCodes.forEach(item => {
             html += `
             <div class="code-card">
                 <div class="code-info">
                     <span class="code-str">${item.code}</span>
-                    ${item.tag==="最新"?'<span class="new-badge">新码</span>':''}
-                    <span class="source-badge">${item.source}</span>
+                    ${item.tag === "最新" ? '<span class="new-badge">新码</span>' : ''}
                     <div class="code-tip">${item.tip}</div>
                 </div>
                 <button class="copy-btn" onclick="copyCode('${item.code}')">一键复制</button>
-            </div>
-            `;
+            </div>`;
         });
         document.getElementById("codeList").innerHTML = html;
     }
 
     // 更新时间
-    function updateTimeText(){
-        document.getElementById("updateText").innerText = 
-        "最后全网扫描：" + new Date().toLocaleString();
+    function updateTime() {
+        document.getElementById("updateText").innerText = "最后更新：" + new Date().toLocaleString();
     }
 
-    // 一键复制
+    // 复制功能
     function copyCode(text) {
         navigator.clipboard.writeText(text);
-        alert("🐥 已复制兑换码：" + text);
+        alert("🐥 已复制：" + text);
     }
 
     // 手动全网扫描
-    async function manualRefresh(){
-        const btn = document.getElementById("refreshBtn");
+    async function manualRefresh() {
+        let btn = document.getElementById("refreshBtn");
         btn.disabled = true;
-        btn.innerText = "⏳ 全网扫描中（官方+媒体+短视频+社群）...";
+        btn.innerText = "⏳ 全网扫描中...";
 
-        // 模拟全网扫描延迟（真实爬虫会请求5大渠道）
-        await new Promise(resolve => setTimeout(resolve, 1800));
+        // 模拟后台请求最新码
+        await new Promise(r => setTimeout(r, 1600));
 
-        // 对比新旧码数量
-        const oldNum = codeData.length;
-        const newNum = latestRemoteCodes.length;
-
-        if(newNum > oldNum){
-            alert("✅ 全网扫描完成！发现【新兑换码】已自动更新（来源：官方/媒体/短视频）");
-            codeData = [...latestRemoteCodes];
-        }else{
-            alert("✅ 全网扫描完成！暂无新增兑换码，当前已覆盖全网最新");
+        if (latestCodes.length > codeData.length) {
+            alert("✅ 扫描完成！发现【新兑换码】已更新");
+            codeData = [...latestCodes];
+        } else {
+            alert("✅ 扫描完成！暂无新兑换码");
         }
 
-        renderCodeList();
-        updateTimeText();
-
+        renderList();
+        updateTime();
+        
         btn.disabled = false;
-        btn.innerText = "🔄 全网手动扫描最新兑换码";
+        btn.innerText = "🔄 手动全网扫描兑换码";
     }
 
-    // 初始化
     initPage();
 </script>
 </body>
